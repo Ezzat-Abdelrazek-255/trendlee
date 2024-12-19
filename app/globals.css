@@ -94,6 +94,12 @@ body {
 .offer-card-shadow {
   box-shadow: -4px 8px 28px 0 hsla(var(--color-primary-css), 0.25);
 }
+.process-mask {
+  mask-image: url("/vectors/process-mask.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
 
 @layer base {
   :root {
