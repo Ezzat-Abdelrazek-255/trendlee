@@ -2,26 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*::after,
+*::before {
+  border-radius: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
+:root {
+  --color-black: 0 0% 0%;
+  --color-white: 0 0% 100%;
+  --color-gray: 240 5% 43%;
+  --color-gray-dark: 240 11% 96%;
+  --color-primary: 168 69% 47%;
+  --color-primary-css: 168, 69%, 47%;
+  --color-primary-dark: 170 74% 26%;
+  --color-primary-light: 169 76% 55%;
+  --cubic-default: cubic-bezier(0.65, 0.05, 0, 1);
+  --duration-default: 0.735s;
+  --animation-default: var(--duration-default) var(--cubic-default);
+  --container-padding: 4.8rem;
+  --sections-gap: 12rem;
+}
+
+/* Tablet */
+@media screen and (max-width: 834px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --container-padding: 2.4rem;
+    --sections-gap: 6rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Mobile Portrait */
+@media screen and (max-width: 440px) {
+  :root {
+    --sections-gap: 3.2rem;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Desktop */
+:root {
+  --size-unit: 10;
+  --size-container: 1920;
+}
+
+/* Desktop */
+@media screen and (max-width: 1440px) {
+  :root {
+    --size-container: 1440;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 834px) {
+  :root {
+    --size-container: 834;
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 440px) {
+  :root {
+    --size-container: 440;
+  }
+}
+
+html {
+  font-size: calc((100vw / var(--size-container)) * var(--size-unit));
+}
+
+body {
+  background: hsl(var(--color-black));
+  color: hsl(var(--color-white));
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  padding-bottom: 3.2rem;
+}
+
+.absolute-center {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.rounded-inherit {
+  border-radius: inherit;
+}
+
+.benefit-card-shadow {
+  box-shadow:
+    -1px 1px 0 0 rgba(0, 0, 0, 0.15),
+    0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.offer-card-shadow {
+  box-shadow: -4px 8px 28px 0 hsla(var(--color-primary-css), 0.25);
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
   }
 }
