@@ -12,7 +12,7 @@ import Button from "./button";
 const MobileNavigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const toggleNavTimeline = useRef(
+  const openNavTimeline = useRef(
     gsap.timeline({
       paused: true,
       defaults: {
@@ -20,12 +20,20 @@ const MobileNavigation = () => {
       },
     }),
   );
+  const closeNavTimeline = useRef(
+    gsap.timeline({
+      paused: true,
+      defaults: {
+        ease: "power.out",
+      },
+    }),
+  );
 
   useGSAP(
-    function() {
+    function () {
       const linksArray = gsap.utils.toArray<HTMLAnchorElement>(".mobile-nav a");
 
-      toggleNavTimeline.current
+      openNavTimeline.current
         .to(
           ".nav-wrapper",
           {
@@ -68,9 +76,48 @@ const MobileNavigation = () => {
           "<",
         );
 
+      closeNavTimeline.current
+        .to(".nav-wrapper", {
+          opacity: 0,
+          autoAlpha: 0,
+          y: "-200%",
+          duration: 0.8,
+        })
+        .to(
+          ".first-bar",
+          {
+            top: "68%",
+            rotate: "0deg",
+          },
+          "<",
+        )
+        .to(
+          ".second-bar",
+          {
+            scaleX: "1",
+          },
+          "<",
+        )
+        .to(
+          ".third-bar",
+          {
+            top: "32%",
+            rotate: "0deg",
+          },
+          "<",
+        )
+        .to(
+          ".contact-btn",
+          {
+            opacity: 0,
+            duration: 1,
+          },
+          "<",
+        );
+
       linksArray.forEach((link) => {
         const text = new SplitType(link);
-        toggleNavTimeline.current.to(
+        openNavTimeline.current.to(
           text.chars,
           {
             y: "200%",
@@ -84,14 +131,19 @@ const MobileNavigation = () => {
     { scope: containerRef },
   );
 
-  const toggleNav = function() {
+  const toggleNav = function () {
     if (isNavOpen) {
-      toggleNavTimeline.current.reverse();
+      closeNavTimeline.current.restart();
     } else {
-      toggleNavTimeline.current.play();
+      openNavTimeline.current.restart();
     }
 
     setIsNavOpen((isNavOpen) => !isNavOpen);
+  };
+
+  const handleLinkClick = function () {
+    closeNavTimeline.current.restart();
+    setIsNavOpen(false);
   };
 
   return (
@@ -110,6 +162,7 @@ const MobileNavigation = () => {
             {navItems.map((item) => (
               <li key={item.label} className="overflow-hidden">
                 <Link
+                  onClick={handleLinkClick}
                   href={item.href}
                   className="inline-block -translate-y-[200%]"
                 >
