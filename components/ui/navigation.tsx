@@ -2,10 +2,10 @@
 
 import { navItems } from "@/constants";
 import { useGSAP } from "@gsap/react";
-import Link from "next/link";
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import ScrollToLink from "./scroll-to-link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +36,9 @@ const Navigation = () => {
       <ul className="relative flex items-center justify-between gap-[3.2rem] rounded-full border-2 border-primary bg-primary/50 p-[3.2rem] text-[1.6rem] uppercase leading-[85%] backdrop-blur-sm after:absolute after:inset-0 after:z-hidden after:bg-primary/25 after:blur-[2.4rem] after:content-['']">
         {navItems.map((navItem, i) => (
           <li key={navItem.label}>
-            <Link href={navItem.href}>{`00${i + 1}/${navItem.label}`}</Link>
+            <ScrollToLink
+              href={navItem.href}
+            >{`00${i + 1}/${navItem.label}`}</ScrollToLink>
           </li>
         ))}
       </ul>

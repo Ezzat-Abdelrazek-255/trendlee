@@ -10,7 +10,10 @@ import {
 
 const OffersSection = () => {
   return (
-    <section className="relative z-base px-[var(--container-padding)]">
+    <section
+      id="offers"
+      className="relative z-base px-[var(--container-padding)]"
+    >
       <div className="flex flex-col gap-[2.4rem]">
         <SectionTitle>Our Offers</SectionTitle>
         <Tabs defaultValue="ad-campaigns">

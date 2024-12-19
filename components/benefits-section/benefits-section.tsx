@@ -5,7 +5,10 @@ import BenefitCard from "./benefit-card";
 
 const BenefitsSection = () => {
   return (
-    <section className="relative z-50 flex flex-col gap-[2.4rem] bg-white py-[4rem]">
+    <section
+      id="benefits"
+      className="relative z-50 flex flex-col gap-[2.4rem] bg-white py-[4rem]"
+    >
       <div className="flex flex-col gap-[1rem]">
         <SectionTitle className="text-black">Why Choose Us</SectionTitle>
         <p className="text-center text-gray">

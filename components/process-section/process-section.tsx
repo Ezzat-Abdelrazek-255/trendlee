@@ -5,7 +5,7 @@ import ProcessTimeline from "./process-timeline";
 
 const ProcessSection = () => {
   return (
-    <section className="relative min-h-screen">
+    <section id="process" className="relative min-h-screen">
       <SectionTitle>Our 6 Steps Process</SectionTitle>
       <Lamp />
       <ProcessTimeline />

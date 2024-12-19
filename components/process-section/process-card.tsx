@@ -14,7 +14,7 @@ const ProcessCard = ({ title, imgSrc, index }: ProcessCardType) => {
   return (
     <article
       className={cn(
-        "mt-[10rem] grid h-[50rem] w-full max-w-[60rem] grid-cols-[auto_1fr] gap-[4.8rem] md:translate-x-[2.5rem] md:grid-cols-[1fr_auto] md:justify-self-end",
+        "mt-[10rem] grid h-[30rem] w-full max-w-[60rem] grid-cols-[auto_1fr] gap-[4.8rem] md:h-[50rem] md:translate-x-[2.5rem] md:grid-cols-[1fr_auto] md:justify-self-end",
         isEven &&
           "md:mt-[60rem] md:-translate-x-[2.5rem] md:grid-cols-[auto_1fr] md:justify-self-start",
       )}
@@ -24,7 +24,7 @@ const ProcessCard = ({ title, imgSrc, index }: ProcessCardType) => {
         <h3
           className={cn(
             "text-right font-display text-[6rem] uppercase leading-[85%]",
-            isEven && "text-left",
+            isEven && "md:text-left",
           )}
         >
           {title}

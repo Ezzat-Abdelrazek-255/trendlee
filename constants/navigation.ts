@@ -15,6 +15,6 @@ export const navItems: NavItem[] = [
   },
   {
     label: "FAQ",
-    href: "#FAQ",
+    href: "#faq",
   },
 ];

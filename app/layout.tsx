@@ -32,10 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${humaneSans.variable} font-body antialiased`}
       >
-        <Header />
-        <ReactLenis root>{children}</ReactLenis>
-        <Grid />
-        <Footer />
+        <ReactLenis root>
+          <Header />
+          {children}
+          <Grid />
+          <Footer />
+        </ReactLenis>
       </body>
     </html>
   );

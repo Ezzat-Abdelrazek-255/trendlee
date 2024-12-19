@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../ui/button";
-import Link from "next/link";
+import ScrollToLink from "../ui/scroll-to-link";
 
 const MainLockup = () => {
   return (
@@ -14,7 +14,7 @@ const MainLockup = () => {
         Save dozens of hours and transform your business in 72 hours
       </p>
       <Button>
-        <Link href="#offers">See the offers</Link>
+        <ScrollToLink href="#offers">See the offers</ScrollToLink>
       </Button>
     </div>
   );

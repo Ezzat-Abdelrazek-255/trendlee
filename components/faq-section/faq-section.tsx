@@ -10,7 +10,7 @@ import { faq } from "@/constants/faq";
 
 const FaqSection = () => {
   return (
-    <section className="px-[var(--container-padding)]">
+    <section id="faq" className="px-[var(--container-padding)]">
       <SectionTitle>Frequently asked questions</SectionTitle>
       <div className="mt-[4rem] flex flex-col items-center">
         <div className="flex w-full max-w-[1560px] flex-col gap-[3.2rem] lg:w-[156rem]">

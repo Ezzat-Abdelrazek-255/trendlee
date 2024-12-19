@@ -19,7 +19,7 @@ const Button = ({
     [key in ButtonVariants]: string;
   } = {
     primary:
-      "relative z-0 rounded-full  px-[2.4rem] py-[1.6rem] text-black after:absolute after:inset-0 after:z-hidden after:bg-primary/50 after:blur-[1.2rem] after:content-[''] font-medium bg-gradient-to-b from-primary to-primary-dark/80 backdrop-blur-sm",
+      "relative hover:after:bg-primary after:transition after:duration-500 hover:text-white transition duration-300 z-0 rounded-full  px-[2.4rem] py-[1.6rem] text-black after:absolute after:inset-0 after:z-hidden after:bg-primary/50 after:blur-[1.2rem] after:content-[''] font-medium bg-gradient-to-b from-primary to-primary-dark/80 backdrop-blur-sm",
     outline:
       "rounded-full border-[1px] border-primary px-[3.2rem] py-[2.4rem] text-[2.4rem] leading-[85%]",
   };
