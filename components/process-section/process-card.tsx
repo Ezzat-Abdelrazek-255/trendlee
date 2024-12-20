@@ -23,7 +23,7 @@ const ProcessCard = ({ title, imgSrc, index }: ProcessCardType) => {
       <div className="relative">
         <h3
           className={cn(
-            "mb-[2rem] text-right font-display text-[3.6rem] font-bold uppercase leading-[85%]",
+            "mb-[2rem] text-right font-display text-[3rem] font-bold uppercase leading-[85%]",
             isEven && "md:text-left",
           )}
         >

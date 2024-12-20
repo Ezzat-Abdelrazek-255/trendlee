@@ -10,8 +10,9 @@ const MainLockup = () => {
         <br /> Bring Your Vision to Life
       </h1>
       <p className="text-[1.7rem] sm:text-[2.4rem]">
-        Elevate your brand with scroll-stopping short-form
-        <br /> videos that engage, convert, and build trust in just 72 hours.
+        Elevate your brand with scroll-stopping
+        <br /> short-form videos that engage, convert, and build trust in just
+        72 hours.
       </p>
       <Button>
         <ScrollToLink href="#offers">
