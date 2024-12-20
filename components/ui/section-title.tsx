@@ -10,7 +10,7 @@ const SectionTitle = ({ children, className }: SectionTitleProps) => {
   return (
     <h2
       className={cn(
-        "text-center font-display text-[8rem] font-medium uppercase leading-[85%]",
+        "text-center font-display text-[4rem] font-bold uppercase leading-[85%] md:text-[6rem]",
         className,
       )}
     >

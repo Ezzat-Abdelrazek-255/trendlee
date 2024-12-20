@@ -30,7 +30,7 @@ const MobileNavigation = () => {
   );
 
   useGSAP(
-    function () {
+    function() {
       const linksArray = gsap.utils.toArray<HTMLAnchorElement>(".mobile-nav a");
 
       openNavTimeline.current
@@ -131,7 +131,7 @@ const MobileNavigation = () => {
     { scope: containerRef },
   );
 
-  const toggleNav = function () {
+  const toggleNav = function() {
     if (isNavOpen) {
       closeNavTimeline.current.restart();
     } else {
@@ -141,7 +141,7 @@ const MobileNavigation = () => {
     setIsNavOpen((isNavOpen) => !isNavOpen);
   };
 
-  const handleLinkClick = function () {
+  const handleLinkClick = function() {
     closeNavTimeline.current.restart();
     setIsNavOpen(false);
   };
@@ -157,8 +157,8 @@ const MobileNavigation = () => {
         <NavButtonBar className="third-bar top-[32%]" />
       </button>
       <div className="nav-wrapper invisible fixed inset-0 grid h-screen -translate-y-[200%] grid-rows-[1fr_auto] gap-8 bg-primary-dark px-[var(--container-padding)] pb-[3.6rem] pt-[12rem]">
-        <nav className="mobile-nav font-display text-[12rem] font-medium uppercase leading-[85%] tracking-wide sm:text-[18rem]">
-          <ul>
+        <nav className="mobile-nav font-display text-[6rem] font-bold uppercase leading-[85%] tracking-wide sm:text-[10rem]">
+          <ul className="flex flex-col gap-[1.2rem]">
             {navItems.map((item) => (
               <li key={item.label} className="overflow-hidden">
                 <Link

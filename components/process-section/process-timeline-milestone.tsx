@@ -56,8 +56,8 @@ const ProcessTimelineMilestone = ({ index }: ProcessTimelineMilestoneProps) => {
       )}
     >
       <div className="rounded-inherit circle-blur absolute inset-0 h-full w-full scale-0 bg-primary/50 blur-sm"></div>
-      <div className="rounded-inherit circle grid h-full w-full scale-0 place-content-center bg-primary font-display text-[3.6rem] font-medium leading-[85%]">
-        <span className="mt-[8px] inline-block">{index}</span>
+      <div className="rounded-inherit circle grid h-full w-full scale-0 place-content-center bg-primary font-display text-[3rem] font-bold leading-[85%]">
+        <span className="inline-block">{index}</span>
       </div>
     </div>
   );

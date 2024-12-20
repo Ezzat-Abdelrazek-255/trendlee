@@ -20,7 +20,7 @@ const config: Config = {
       },
       fontFamily: {
         body: "var(--font-geist-sans)",
-        display: "var(--font-humane-sans)",
+        display: "var(--font-geist-sans)",
       },
       screens: {
         sm: "440px",

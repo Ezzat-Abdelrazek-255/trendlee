@@ -17,8 +17,9 @@ const Footer = () => {
             className="h-full w-full object-cover"
           />
         </div>
-        <h2 className="font-display text-[6rem] font-medium uppercase leading-[85%] md:text-[8rem]">
-          Need eye-catching content fast? We’ve got you covered
+        <h2 className="mb-[1.2rem] font-display text-[3.2rem] font-bold uppercase leading-[85%] md:text-[6rem]">
+          Need eye-catching content fast?
+          <br /> We’ve got you covered
         </h2>
         <div className="flex flex-col items-center gap-[3.2rem]">
           <p>

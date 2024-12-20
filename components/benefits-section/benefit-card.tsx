@@ -20,7 +20,7 @@ const BenefitCard = ({ vectorSrc, title, description }: BenefitCardProps) => {
         />
       </div>
       <div className="flex flex-col gap-[0.8rem]">
-        <h3 className="font-display text-[4.8rem] font-medium uppercase leading-[85%] text-black">
+        <h3 className="font-display text-[2.4rem] font-bold uppercase leading-[85%] text-black lg:text-[2rem]">
           {title}
         </h3>
         <p className="text-gray">{description}</p>

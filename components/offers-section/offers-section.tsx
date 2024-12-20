@@ -24,7 +24,7 @@ const OffersSection = () => {
               <TabsTrigger value="engage-convert">Engage & Convert</TabsTrigger>
             </TabsList>
           </div>
-          <p className="mb-[8rem] mt-[1.6rem] text-center">
+          <p className="mb-[4rem] mt-[1.6rem] text-center md:mb-[8rem]">
             Videos designed to captivate and convert, <br />
             optimized to maximize your advertising performance.
           </p>

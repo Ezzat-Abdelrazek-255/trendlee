@@ -16,14 +16,14 @@ const ProcessCard = ({ title, imgSrc, index }: ProcessCardType) => {
       className={cn(
         "mt-[10rem] grid h-[30rem] w-full max-w-[60rem] grid-cols-[auto_1fr] gap-[4.8rem] md:h-[50rem] md:translate-x-[2.5rem] md:grid-cols-[1fr_auto] md:justify-self-end",
         isEven &&
-          "md:mt-[60rem] md:-translate-x-[2.5rem] md:grid-cols-[auto_1fr] md:justify-self-start",
+        "md:mt-[60rem] md:-translate-x-[2.5rem] md:grid-cols-[auto_1fr] md:justify-self-start",
       )}
     >
       <ProcessTimelineMilestone index={index} />
       <div className="relative">
         <h3
           className={cn(
-            "text-right font-display text-[6rem] uppercase leading-[85%]",
+            "mb-[2rem] text-right font-display text-[3.6rem] font-bold uppercase leading-[85%]",
             isEven && "md:text-left",
           )}
         >
