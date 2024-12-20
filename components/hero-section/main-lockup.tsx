@@ -6,15 +6,17 @@ const MainLockup = () => {
   return (
     <div className="relative z-10 flex flex-col items-center gap-[0.8rem] text-center">
       <h1 className="font-display text-[3.6rem] font-bold uppercase leading-[85%] sm:text-[6rem]">
-        Create. Captivate. Convery. All
-        <br />
-        With One Click
+        Turn Ideas into Impact. Let Us
+        <br /> Bring Your Vision to Life
       </h1>
       <p className="text-[1.7rem] sm:text-[2.4rem]">
-        Save dozens of hours and transform your business in 72 hours
+        Elevate your brand with scroll-stopping short-form
+        <br /> videos that engage, convert, and build trust in just 72 hours.
       </p>
       <Button>
-        <ScrollToLink href="#offers">See the offers</ScrollToLink>
+        <ScrollToLink href="#offers">
+          See Our Offers & Transform Your Business Today
+        </ScrollToLink>
       </Button>
     </div>
   );
