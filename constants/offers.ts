@@ -248,3 +248,79 @@ export const EngageAndConvertOffers: Offer[] = [
     ],
   },
 ];
+
+export const paymentSuccessEmailMarkup = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Purchase Confirmation</h1>
+        </div>
+        <div class="content">
+            <p>Thank you for your purchase! We're excited to assist you with your order.</p>
+            <p>Please fill out the form below to proceed:</p>
+            <a href="https://forms.gle/Mzh2xNvgZk8aAD6i8" class="btn">Fill out the form (Français)</a>
+            <p>or</p>
+            <a href="https://forms.gle/hzk5Q5HKf9moD9df6" class="btn">Fill out the form (English)</a>
+            <p>Once you've filled out the form, our team will contact you as soon as possible.</p>
+        </div>
+        <div class="footer">
+            <p>If you have any questions, feel free to reach out to us at <a href="mailto:support@example.com">support@example.com</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
+`;
