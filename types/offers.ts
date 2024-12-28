@@ -7,6 +7,7 @@ export type Offer = {
   title: string;
   isMontly: boolean;
   isPopular: boolean;
+  paymentLink: string;
   price: number;
   perks: Perk[];
 };

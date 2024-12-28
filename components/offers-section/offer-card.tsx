@@ -3,22 +3,21 @@ import React from "react";
 import Button from "../ui/button";
 import { cn } from "@/utils";
 import Image from "next/image";
+import Link from "next/link";
 
-type OfferCardProps = Offer;
+type OfferCardProps = {
+  offer: Offer;
+};
 
 const OfferCard = ({
-  isPopular,
-  price,
-  perks,
-  title,
-  isMontly,
+  offer: { isPopular, price, perks, title, isMontly, paymentLink },
 }: OfferCardProps) => {
   return (
     <article
       className={cn(
-        "relative flex h-[60rem] w-[40rem] max-w-[800px] flex-col justify-between rounded-bl-[2.4rem] rounded-br-[1.2rem] rounded-tl-[1.2rem] rounded-tr-[2.4rem] border-2 border-primary p-[2.4rem] py-[3.2rem] pt-[4.8rem]",
+        "relative flex aspect-[0.6666] w-[40rem] max-w-[800px] flex-col justify-between rounded-bl-[2.4rem] rounded-br-[1.2rem] rounded-tl-[1.2rem] rounded-tr-[2.4rem] border-2 border-primary p-[2.4rem] py-[3.2rem] pt-[4.8rem]",
         isPopular &&
-          "offer-card-shadow bg-gradient-to-b from-primary/50 to-primary-dark/25 backdrop-blur-[4px]",
+        "offer-card-shadow bg-gradient-to-b from-primary/50 to-primary-dark/25 backdrop-blur-[4px]",
       )}
     >
       {isPopular && (
@@ -45,7 +44,7 @@ const OfferCard = ({
             {isMontly && <span className="text-[3rem]">/month</span>}
           </h3>
         </div>
-        <ul className="flex flex-col gap-8 text-[1.2rem]">
+        <ul className="mb-[2rem] flex flex-col gap-8 text-[1.2rem]">
           {perks.map((perk) => (
             <li
               className="flex items-center gap-[1rem] border-b-2 border-dashed border-primary/25 pb-[1.6rem] text-left last-of-type:border-none"
@@ -68,12 +67,13 @@ const OfferCard = ({
         </ul>
       </div>
       <Button
+        asChild
         className={cn(
           isPopular &&
-            "bg-white bg-none text-black shadow-md blur-0 after:content-none hover:bg-black hover:text-white",
+          "bg-white bg-none text-black shadow-md blur-0 after:content-none hover:bg-black hover:text-white",
         )}
       >
-        Choose this plan
+        <Link href={paymentLink}>Choose this plan</Link>
       </Button>
     </article>
   );

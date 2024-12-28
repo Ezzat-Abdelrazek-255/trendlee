@@ -6,6 +6,7 @@ export const AdCampaignsOffers: Offer[] = [
     isMontly: false,
     isPopular: false,
     price: 350,
+    paymentLink: "",
     perks: [
       {
         description:
@@ -14,12 +15,30 @@ export const AdCampaignsOffers: Offer[] = [
       },
       {
         description:
-          "Tailored to specific ad formats: high-performing CTAs, subtitles, and benefit highlights.",
+          "Customised scripts: Tailored to grab attention and drive conversions.",
         isBonus: false,
       },
       {
         description:
-          "Bonus: Personalized recommendation for your first campaign.",
+          "Voice-over + sound design: Professional narration and sound effects to make your video stand out",
+        isBonus: false,
+      },
+      {
+        description:
+          "Storyboard & illustrations: A clear visual plan for engaging and effective videos.",
+        isBonus: false,
+      },
+      {
+        description: "Transcription in 1 language (ideal for subtitles)",
+        isBonus: false,
+      },
+      {
+        description:
+          "Free guide/video to help you get started with your first campaign, ensuring the best performance.",
+        isBonus: true,
+      },
+      {
+        description: "1 revision cycle to perfect your video",
         isBonus: true,
       },
     ],
@@ -28,21 +47,47 @@ export const AdCampaignsOffers: Offer[] = [
     title: "High-Impact Ads",
     isMontly: false,
     isPopular: true,
+    paymentLink: "",
     price: 750,
     perks: [
       {
         description:
-          "3 short videos (15-30 seconds), ready for TikTok, Facebook, and Instagram.",
+          "3  premium short videos (15-30 seconds), ready for TikTok, Facebook, and Instagram.",
         isBonus: false,
       },
       {
         description:
-          "Tailored to specific ad formats: high-performing CTAs, subtitles, and benefit highlights.",
+          "Attention-grabbing text optimised for your target audience",
         isBonus: false,
       },
       {
         description:
-          "Bonus: Personalized recommendation for your first campaign.",
+          "Professional voice-over + sound design: Engaging narration and high-quality sound effects to enhance video appeal",
+        isBonus: false,
+      },
+      {
+        description:
+          "Custom storyboard & illustrations: Detailed visual planning for a story-driven approach",
+        isBonus: false,
+      },
+      {
+        description:
+          "Transcriptions in 3 languages (e.g., English, French, Spanish)",
+        isBonus: false,
+      },
+      {
+        description:
+          "Transcriptions in 3 languages (e.g., English, French, Spanish)",
+        isBonus: false,
+      },
+      {
+        description:
+          "2 revision cycles to fine-tune your videos and ensure they align perfectly with your brand message",
+        isBonus: true,
+      },
+      {
+        description:
+          "Post-campaign feedback session: 30-minute call to review results and suggest imporvements for better performance in future campaigns",
         isBonus: true,
       },
     ],
@@ -51,6 +96,7 @@ export const AdCampaignsOffers: Offer[] = [
     title: "Ads Mastery Pack",
     isMontly: false,
     isPopular: false,
+    paymentLink: "",
     price: 1200,
     perks: [
       {
@@ -60,16 +106,38 @@ export const AdCampaignsOffers: Offer[] = [
       },
       {
         description:
-          "Comprehensive ad strategy: budgeting, targeting, and optimization.",
+          "Custom scripts: Each video crafted to align with your messaging at each stage of the funnel",
         isBonus: false,
       },
       {
         description:
-          "Post-campaign support: performance analysis and improvement suggestions.",
+          "Premium voice-over + sound design: High-quality narration and sound for maximum impact.",
+        isBonus: false,
+      },
+
+      {
+        description:
+          "Comprehensive storyboard & illustrations: In-depth visual planning for effective storytelling and engagement",
         isBonus: false,
       },
       {
-        description: "Bonus: Free audit of your current ad strategy.",
+        description:
+          "Transcriptions in 3 languages (e.g., English, French, German).",
+        isBonus: false,
+      },
+      {
+        description:
+          "3 revision cycles to perfect each video, ensuring they resonate with your target audience.",
+        isBonus: true,
+      },
+      {
+        description:
+          "Post-campaign support: 30 days of performance monitoring with actionable recommendations to optimise your ad strategy",
+        isBonus: true,
+      },
+      {
+        description:
+          "Free video marketing training: A 45-minute session to learn how to optimise your ad campaigns for better ROI",
         isBonus: true,
       },
     ],
@@ -79,6 +147,7 @@ export const OrganicOffers: Offer[] = [
   {
     title: "Organic Boost Pack",
     isMontly: true,
+    paymentLink: "",
     isPopular: false,
     price: 300,
     perks: [
@@ -100,6 +169,7 @@ export const OrganicOffers: Offer[] = [
   {
     title: "Viral Growth Pack",
     isMontly: true,
+    paymentLink: "",
     isPopular: true,
     price: 600,
     perks: [
@@ -121,6 +191,7 @@ export const OrganicOffers: Offer[] = [
   {
     title: "Go Viral Master Pack",
     isMontly: true,
+    paymentLink: "",
     isPopular: false,
     price: 1000,
     perks: [
@@ -151,6 +222,7 @@ export const EngageAndConvertOffers: Offer[] = [
     title: "Complete Pack",
     isMontly: true,
     isPopular: false,
+    paymentLink: "",
     price: 1500,
     perks: [
       {
