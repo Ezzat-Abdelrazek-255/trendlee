@@ -1,8 +1,14 @@
 import { NextResponse, NextRequest } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
+import { paymentSuccessEmailMarkup } from "@/constants/offers";
 
 const STRIPE_SIGNATURE_STRING = "Stripe-Signature";
+// const EMAIL_FROM = "trendlee.agency@gmail.com";
+const EMAIL_FROM = "support@ezzatabdelrazek.com";
+const EMAIL_TO = "ezzatabdelrazek255@gmail.com";
+const EMAIL_SUBJECT =
+  "Thank You for Your Purchase! Please Complete the Form to Proceed – Trendlee";
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const resendSecretKey = process.env.RESEND_KEY;
@@ -18,9 +24,9 @@ if (!resendSecretKey) {
 const stripe = new Stripe(stripeSecretKey);
 const resend = new Resend(resendSecretKey);
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
   const payload = await req.text();
-  const response = JSON.parse(payload);
+  // const response = JSON.parse(payload);
 
   const sig = req.headers.get(STRIPE_SIGNATURE_STRING);
 
@@ -37,16 +43,18 @@ export async function POST(req: NextRequest, res: NextResponse) {
     );
 
     if (event.type === "payment_intent.succeeded") {
-      resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: "ezzatabdelrazek255@gmail.com",
-        subject: "Hello World",
-        html: "<p>Congrats on sending your <a href='https://forms.gle/mHBxNZopQBdAc2mr9'>first email</a>!</p>",
+      const emailResponse = await resend.emails.send({
+        from: EMAIL_FROM,
+        to: EMAIL_TO,
+        subject: EMAIL_SUBJECT,
+        html: paymentSuccessEmailMarkup,
       });
+      console.log(emailResponse);
     }
 
     return NextResponse.json({ status: "Success", event: event.type });
   } catch (error) {
+    console.log(error);
     return NextResponse.json({ status: "Failed", error });
   }
 }
