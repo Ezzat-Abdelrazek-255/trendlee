@@ -28,6 +28,7 @@ export async function POST(req: NextRequest) {
   const response = JSON.parse(payload);
 
   const sig = req.headers.get(STRIPE_SIGNATURE_STRING);
+  console.log(sig);
 
   try {
     const webhookSecretKey = process.env.STRIPE_WEBHOOK_SECRET_KEY;
@@ -40,7 +41,6 @@ export async function POST(req: NextRequest) {
       sig,
       webhookSecretKey,
     );
-    console.log(response.email);
 
     if (event.type === "payment_intent.succeeded") {
       const emailResponse = await resend.emails.send({
