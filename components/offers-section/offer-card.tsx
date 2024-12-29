@@ -73,10 +73,10 @@ const OfferCard = ({
           "bg-white bg-none text-black shadow-md blur-0 after:content-none hover:bg-black hover:text-white",
         )}
       >
-        <Link href={paymentLink}>Choose this plan</Link>
-        {/* <Link href="https://buy.stripe.com/test_9AQ8Al8qmd8B2go000"> */}
-        {/*   Choose this plan */}
-        {/* </Link> */}
+        {/* <Link href={paymentLink}>Choose this plan</Link> */}
+        <Link href="https://buy.stripe.com/test_9AQ8Al8qmd8B2go000">
+          Choose this plan
+        </Link>
       </Button>
     </article>
   );

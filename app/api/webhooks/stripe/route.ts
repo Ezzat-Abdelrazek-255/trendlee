@@ -4,8 +4,7 @@ import { Resend } from "resend";
 import { paymentSuccessEmailMarkup } from "@/constants/offers";
 
 const STRIPE_SIGNATURE_STRING = "Stripe-Signature";
-// const EMAIL_FROM = "trendlee.agency@gmail.com";
-const EMAIL_FROM = "support@ezzatabdelrazek.com";
+const EMAIL_FROM = "support@trendlee.agency";
 const EMAIL_TO = "ezzatabdelrazek255@gmail.com";
 const EMAIL_SUBJECT =
   "Thank You for Your Purchase! Please Complete the Form to Proceed – Trendlee";
@@ -26,7 +25,7 @@ const resend = new Resend(resendSecretKey);
 
 export async function POST(req: NextRequest) {
   const payload = await req.text();
-  // const response = JSON.parse(payload);
+  const response = JSON.parse(payload);
 
   const sig = req.headers.get(STRIPE_SIGNATURE_STRING);
 
@@ -41,6 +40,7 @@ export async function POST(req: NextRequest) {
       sig,
       webhookSecretKey,
     );
+    console.log(response.email);
 
     if (event.type === "payment_intent.succeeded") {
       const emailResponse = await resend.emails.send({
