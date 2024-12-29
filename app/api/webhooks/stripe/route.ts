@@ -28,6 +28,7 @@ export async function POST(req: NextRequest) {
   const response = JSON.parse(payload);
 
   const sig = req.headers.get(STRIPE_SIGNATURE_STRING);
+  console.log(response);
   console.log(sig);
 
   try {
