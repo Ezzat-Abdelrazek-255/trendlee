@@ -10,7 +10,7 @@ type OfferCardProps = {
 };
 
 const OfferCard = ({
-  offer: { isPopular, price, perks, title, isMontly, paymentLink },
+  offer: { isPopular, price, perks, title, isMontly },
 }: OfferCardProps) => {
   return (
     <article
