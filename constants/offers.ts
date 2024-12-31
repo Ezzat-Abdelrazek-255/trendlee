@@ -2,6 +2,14 @@ import { Offer } from "@/types/offers";
 
 export const AdCampaignsOffers: Offer[] = [
   {
+    title: "Test",
+    isMontly: false,
+    isPopular: false,
+    price: 1,
+    paymentLink: "https://buy.stripe.com/14kdRj3Q45Toaha008",
+    perks: [],
+  },
+  {
     title: "Ads Boost Pack",
     isMontly: false,
     isPopular: false,
