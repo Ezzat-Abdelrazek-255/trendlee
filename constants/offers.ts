@@ -318,7 +318,7 @@ export const paymentSuccessEmailMarkup = `
             <p>Once you've filled out the form, our team will contact you as soon as possible.</p>
         </div>
         <div class="footer">
-            <p>If you have any questions, feel free to reach out to us at <a href="mailto:support@trendle.agency">support@trendle.agency</a>.</p>
+            <p>If you have any questions, feel free to reach out to us at <a href="mailto:trendlee.agency@gmail.com">trendlee.agency@gmail.com</a>.</p>
         </div>
     </div>
 </body>

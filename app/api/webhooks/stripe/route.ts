@@ -4,8 +4,7 @@ import { Resend } from "resend";
 import { paymentSuccessEmailMarkup } from "@/constants/offers";
 
 const STRIPE_SIGNATURE_STRING = "Stripe-Signature";
-const EMAIL_FROM = "support@trendlee.agency";
-const EMAIL_TO = "ezzatabdelrazek255@gmail.com";
+const EMAIL_FROM = "no-reply@trendlee.agency";
 const EMAIL_SUBJECT =
   "Thank You for Your Purchase! Please Complete the Form to Proceed – Trendlee";
 
@@ -25,11 +24,7 @@ const resend = new Resend(resendSecretKey);
 
 export async function POST(req: NextRequest) {
   const payload = await req.text();
-  const response = JSON.parse(payload);
-
   const sig = req.headers.get(STRIPE_SIGNATURE_STRING);
-  console.log(response);
-  console.log(sig);
 
   try {
     const webhookSecretKey = process.env.STRIPE_WEBHOOK_SECRET_KEY;
@@ -43,10 +38,17 @@ export async function POST(req: NextRequest) {
       webhookSecretKey,
     );
 
-    if (event.type === "payment_intent.succeeded") {
+    if (event.type === "charge.succeeded") {
+      const charge = event.data.object; // This is a Stripe charge object
+      const customerEmail = charge.billing_details?.email;
+
+      if (!customerEmail) {
+        throw new Error("Customer email not found in the charge object");
+      }
+
       const emailResponse = await resend.emails.send({
         from: EMAIL_FROM,
-        to: EMAIL_TO,
+        to: customerEmail,
         subject: EMAIL_SUBJECT,
         html: paymentSuccessEmailMarkup,
       });
