@@ -6,7 +6,7 @@ export const AdCampaignsOffers: Offer[] = [
     isMontly: false,
     isPopular: false,
     price: 350,
-    paymentLink: "",
+    paymentLink: "https://buy.stripe.com/cN2aF7cmA0z474YdQQ",
     perks: [
       {
         description:
@@ -47,7 +47,7 @@ export const AdCampaignsOffers: Offer[] = [
     title: "High-Impact Ads",
     isMontly: false,
     isPopular: true,
-    paymentLink: "",
+    paymentLink: "https://buy.stripe.com/dR600t72gchM9d6eUV",
     price: 750,
     perks: [
       {
@@ -96,7 +96,7 @@ export const AdCampaignsOffers: Offer[] = [
     title: "Ads Mastery Pack",
     isMontly: false,
     isPopular: false,
-    paymentLink: "",
+    paymentLink: "https://buy.stripe.com/fZe8wZ4U82Hc60UfZ0",
     price: 1200,
     perks: [
       {
@@ -147,7 +147,7 @@ export const OrganicOffers: Offer[] = [
   {
     title: "Organic Boost Pack",
     isMontly: true,
-    paymentLink: "",
+    paymentLink: "https://buy.stripe.com/3cs9B3aesepU9d6147",
     isPopular: false,
     price: 300,
     perks: [
@@ -169,7 +169,7 @@ export const OrganicOffers: Offer[] = [
   {
     title: "Viral Growth Pack",
     isMontly: true,
-    paymentLink: "",
+    paymentLink: "https://buy.stripe.com/28oaF7gCQdlQahaeUY",
     isPopular: true,
     price: 600,
     perks: [
@@ -191,7 +191,7 @@ export const OrganicOffers: Offer[] = [
   {
     title: "Go Viral Master Pack",
     isMontly: true,
-    paymentLink: "",
+    paymentLink: "https://buy.stripe.com/dR63cF2M095A3SMbIN",
     isPopular: false,
     price: 1000,
     perks: [
@@ -222,7 +222,7 @@ export const EngageAndConvertOffers: Offer[] = [
     title: "Complete Pack",
     isMontly: true,
     isPopular: false,
-    paymentLink: "",
+    paymentLink: "https://buy.stripe.com/28o4gJaes3Lgexq14a",
     price: 1500,
     perks: [
       {
