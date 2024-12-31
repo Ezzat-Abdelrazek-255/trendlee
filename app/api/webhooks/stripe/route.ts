@@ -4,7 +4,7 @@ import { Resend } from "resend";
 import { paymentSuccessEmailMarkup } from "@/constants/offers";
 
 const STRIPE_SIGNATURE_STRING = "Stripe-Signature";
-const EMAIL_FROM = "no-reply@trendlee.agency";
+const EMAIL_FROM = "Trendlee Agency <no-reply@trendlee.agency>";
 const EMAIL_SUBJECT =
   "Thank You for Your Purchase! Please Complete the Form to Proceed – Trendlee";
 

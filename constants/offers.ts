@@ -302,6 +302,10 @@ export const paymentSuccessEmailMarkup = `
             color: #fff;
             text-decoration: none;
         }
+
+        a:visited,a:active {
+        color: #fff;
+        }
     </style>
 </head>
 <body>
