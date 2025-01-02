@@ -6,8 +6,6 @@ const MainLockup = () => {
   return (
     <div className="relative z-10 flex flex-col items-center gap-[0.8rem] text-center">
       <h1 className="font-display text-[3.6rem] font-bold uppercase leading-[105%] sm:text-[6rem]">
-        Turn Ideas into Impact
-        <br />
         Let us bring your
         <br /> vision to life
       </h1>
