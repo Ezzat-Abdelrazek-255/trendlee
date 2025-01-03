@@ -46,8 +46,12 @@ export async function POST(req: NextRequest) {
       webhookSecretKey,
     );
     console.log(event.type);
+    console.log(process.env.ENVIRONMENT);
 
-    if (event.type === "charge.succeeded") {
+    if (
+      event.type === "charge.succeeded" ||
+      event.type === "payment_intent.succeeded"
+    ) {
       const charge = event.data.object; // This is a Stripe charge object
       const customerEmail = charge.billing_details?.email;
 
