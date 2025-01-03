@@ -48,10 +48,7 @@ export async function POST(req: NextRequest) {
     );
     console.log(event.type);
 
-    if (
-      event.type === "charge.succeeded" ||
-      event.type === "payment_intent.succeeded"
-    ) {
+    if (event.type === "charge.succeeded") {
       const charge = event.data.object; // This is a Stripe charge object
       const customerEmail = charge.billing_details?.email;
 
