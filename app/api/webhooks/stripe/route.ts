@@ -40,13 +40,13 @@ export async function POST(req: NextRequest) {
       throw new Error("Stripe Signature or Webhook secret key is missing");
     }
 
+    console.log(process.env.ENVIRONMENT);
     const event = stripe.webhooks.constructEvent(
       payload,
       sig,
       webhookSecretKey,
     );
     console.log(event.type);
-    console.log(process.env.ENVIRONMENT);
 
     if (
       event.type === "charge.succeeded" ||
