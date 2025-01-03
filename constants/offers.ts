@@ -5,8 +5,8 @@ export const AdCampaignsOffers: Offer[] = [
     title: "Test",
     isMontly: false,
     isPopular: false,
-    price: 1,
-    paymentLink: "https://buy.stripe.com/14kdRj3Q45Toaha008",
+    price: 0.5,
+    paymentLink: "https://buy.stripe.com/bIYdRj2M0bdI9d67sB",
     perks: [],
   },
   {
