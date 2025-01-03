@@ -8,7 +8,11 @@ const EMAIL_FROM = "Trendlee Agency <no-reply@trendlee.agency>";
 const EMAIL_SUBJECT =
   "Thank You for Your Purchase! Please Complete the Form to Proceed – Trendlee";
 
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+const stripeSecretKey =
+  process.env.ENVIRONMENT === "development"
+    ? process.env.DEV_STRIPE_SECRET_KEY
+    : process.env.PROD_STRIPE_SECRET_KEY;
+
 const resendSecretKey = process.env.RESEND_KEY;
 
 if (!stripeSecretKey) {
@@ -27,7 +31,11 @@ export async function POST(req: NextRequest) {
   const sig = req.headers.get(STRIPE_SIGNATURE_STRING);
 
   try {
-    const webhookSecretKey = process.env.STRIPE_WEBHOOK_SECRET_KEY;
+    const webhookSecretKey =
+      process.env.ENVIRONMENT === "development"
+        ? process.env.DEV_STRIPE_WEBHOOK_SECRET_KEY
+        : process.env.PROD_STRIPE_WEBHOOK_SECRET_KEY;
+
     if (!sig || !webhookSecretKey) {
       throw new Error("Stripe Signature or Webhook secret key is missing");
     }
