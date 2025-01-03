@@ -3,6 +3,7 @@ import Logo from "./logo";
 import Button from "./button";
 import Navigation from "./navigation";
 import MobileNavigation from "./mobile-navigation";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -11,8 +12,8 @@ const Header = () => {
       <div className="absolute-center">
         <Navigation />
       </div>
-      <Button className="hidden md:block" variant="outline">
-        Contact
+      <Button asChild className="hidden md:block" variant="outline">
+        <Link href="mailto:trendlee.agency@gmail.com">Contact</Link>
       </Button>
       <MobileNavigation />
     </header>
