@@ -8,7 +8,7 @@ type OffersCardsProps = {
 
 const OffersCards = ({ offers }: OffersCardsProps) => {
   return (
-    <div className="mx-auto flex max-w-[1560px] flex-col items-stretch justify-center gap-[4.8rem] md:flex-row">
+    <div className="mx-auto flex max-w-[1560px] flex-col items-center justify-center gap-[4.8rem] md:flex-row md:items-stretch">
       {offers.map((offer) => (
         <OfferCard key={offer.title} offer={offer} />
       ))}

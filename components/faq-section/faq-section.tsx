@@ -25,10 +25,10 @@ const FaqSection = () => {
                 className="w-full rounded-bl-[1.6rem] rounded-br-[0.8rem] rounded-tl-[0.8rem] rounded-tr-[1.6rem] border-2 border-none bg-gradient-to-r from-primary/50 to-primary-dark/50 px-[2.4rem] py-[1.2rem] transition hover:bg-primary/50"
                 value="item-1"
               >
-                <AccordionTrigger className="text-[1.2rem] font-bold uppercase sm:text-[2.4rem] md:text-[3.2rem]">
+                <AccordionTrigger className="text-[1.2rem] font-bold uppercase sm:text-[1.6rem] md:text-[2.4rem]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[1.2rem] sm:text-[1.6rem]">
+                <AccordionContent className="text-[1.2rem] leading-[150%] sm:text-[1.6rem]">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

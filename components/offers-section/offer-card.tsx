@@ -44,7 +44,7 @@ const OfferCard = ({
             {isMontly && <span className="text-[3rem]">/month</span>}
           </h3>
         </div>
-        <ul className="mb-[2rem] flex flex-col gap-8 text-[1.2rem]">
+        <ul className="mb-[2rem] flex flex-col gap-8 text-[1.6rem]">
           {perks.map((perk) => (
             <li
               className="flex items-center gap-[1rem] border-b-2 border-dashed border-primary/25 pb-[1.6rem] text-left last-of-type:border-none"

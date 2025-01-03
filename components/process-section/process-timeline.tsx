@@ -13,6 +13,7 @@ const ProcessTimeline = () => {
           <ProcessCard
             index={i + 1}
             key={step.title}
+            description={step.description}
             title={step.title}
             imgSrc={step.imgSrc}
           />
