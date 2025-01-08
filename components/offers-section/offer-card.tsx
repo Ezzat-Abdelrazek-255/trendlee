@@ -39,10 +39,15 @@ const OfferCard = ({
           <p className={cn("text-primary", isPopular && "text-white")}>
             {title}
           </p>
-          <h3 className="text-[7rem] font-bold leading-[85%]">
-            €{price}
-            {isMontly && <span className="text-[3rem]">/month</span>}
-          </h3>
+          <div className="flex items-end gap-4 self-center">
+            <h3 className="text-[7rem] font-bold leading-[85%]">
+              €{price / 2}
+              {isMontly && <span className="text-[3rem]">/month</span>}
+            </h3>
+            <p className="text-[2rem] font-bold text-zinc-300">
+              50%: <span className="line-through">€{price}</span>
+            </p>
+          </div>
         </div>
         <ul className="mb-[2rem] flex flex-col gap-8 text-[1.6rem]">
           {perks.map((perk) => (
