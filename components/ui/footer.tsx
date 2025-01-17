@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <div className="mx-auto flex w-full max-w-[1560px] flex-col items-center gap-[2.4rem] md:items-start">
         <div className="flex w-full flex-col items-center justify-between gap-[2.4rem] text-center md:flex-row">
-          <Logo />
+          <Logo className="mx-auto" />
         </div>
         <div>
           <ul className="flex items-center gap-[2.4rem]">

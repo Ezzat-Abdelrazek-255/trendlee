@@ -1,8 +1,22 @@
+import { cn } from "@/utils";
+import Image from "next/image";
 import React from "react";
 
-const Logo = () => {
+type LogoProps = {
+  className?: string;
+};
+
+const Logo = ({ className }: LogoProps) => {
   return (
-    <div className="relative z-base aspect-square w-[3.6rem] rounded-full bg-white" />
+    <div className="relative inline-block">
+      <Image
+        src="/vectors/logo.svg"
+        alt="trendlee logo"
+        className={cn("w-1/2 object-cover md:h-full md:w-full", className)}
+        width={200}
+        height={200}
+      />
+    </div>
   );
 };
 
